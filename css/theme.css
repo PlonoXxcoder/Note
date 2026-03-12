@@ -1,0 +1,80 @@
+/* ═══════════════════════════════════════════════
+   THEME.CSS — Variables de design & Reset global
+   Source : Figma design Neo-Note
+═══════════════════════════════════════════════ */
+
+/* ── Variables globales (Light mode) ── */
+:root {
+  /* Dashboard */
+  --bg:        #F5F5F7;
+  --card:      #ffffff;
+  --sidebar:   #ffffff;
+  --primary:   #007AFF;
+  --primary-fg:#ffffff;
+  --fg:        #1c1c1e;
+  --fg2:       #8e8e93;
+  --muted:     #e5e5ea;
+  --border:    rgba(0, 0, 0, 0.08);
+  --shadow:    0 2px 20px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.14);
+
+  /* Border radius tokens */
+  --r-sm:  12px;
+  --r-md:  16px;
+  --r-lg:  20px;
+  --r-xl:  24px;
+
+  /* Typographie */
+  --font: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'DM Mono', monospace;
+
+  /* Éditeur (toujours sombre) */
+  --ed-bg:      #1a1f2e;
+  --ed-surface: #21283a;
+  --ed-border:  rgba(255, 255, 255, 0.08);
+  --ed-text:    #e6edf3;
+  --ed-text2:   #8b949e;
+  --ed-glass:   rgba(26, 31, 46, 0.92);
+}
+
+/* ── Dark mode (dashboard seulement) ── */
+html.dark {
+  --bg:       #0a0e1a;
+  --card:     #1a1f2e;
+  --sidebar:  #1a1f2e;
+  --fg:       #f5f5f7;
+  --fg2:      #8e8e93;
+  --muted:    #2c3142;
+  --border:   rgba(255, 255, 255, 0.10);
+  --shadow:   0 2px 20px rgba(0, 0, 0, 0.30);
+  --shadow-lg:0 8px 40px rgba(0, 0, 0, 0.50);
+}
+
+/* ── Reset ── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--fg);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+button {
+  font-family: var(--font);
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input {
+  font-family: var(--font);
+}
